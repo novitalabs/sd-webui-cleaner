@@ -2,7 +2,7 @@
 This is a WEBUI extension that provides image erasure functionality. It supports both UI and API simultaneously.
 
 
-![Alt text](image.png)
+![Alt text](https://github.com/novitalabs/sd-webui-cleaner/blob/main/example/images/image1.png)
 
 -
 ## install
