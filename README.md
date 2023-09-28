@@ -17,6 +17,8 @@ git clone https://github.com/novitalabs/sd-webui-cleaner.git
 
 https://github.com/novitalabs/sd-webui-cleaner/assets/55743667/3f9f652b-d3b7-4c08-a4c6-0e9fe731c77c
 
+<br>
+
 ### API
 
 ```
@@ -37,6 +39,13 @@ body:
   "image": "<image base64 string>"
 }
 ```
+
+<br>
+
+### Used without GPU
+If you don't have a GPU, please set the cleanr_use_cpu parameter to true through the setting page or api.
+
+<br>
 
 ## Thanks
 - https://github.com/advimman/lama
