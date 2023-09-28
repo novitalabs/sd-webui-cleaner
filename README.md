@@ -15,6 +15,8 @@ git clone https://github.com/novitalabs/sd-webui-cleaner.git
 
 ## Get Started
 
+https://github.com/novitalabs/sd-webui-cleaner/assets/55743667/3f9f652b-d3b7-4c08-a4c6-0e9fe731c77c
+
 ### API
 
 ```
