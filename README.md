@@ -6,7 +6,7 @@ This is a WEBUI extension that provides image erasure functionality. It supports
 
 <br>
 
-## install
+## Install
 Clone this project in the WEBUI extensions folder
 ```
 git clone https://github.com/novitalabs/sd-webui-cleaner.git
