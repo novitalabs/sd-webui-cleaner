@@ -12,7 +12,9 @@ Clone this project in the WEBUI extensions folder
 git clone https://github.com/novitalabs/sd-webui-cleaner.git
 ```
 <br>
+
 ## Get Started
+
 ### API
 
 ```
