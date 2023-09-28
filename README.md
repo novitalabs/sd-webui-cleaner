@@ -1,5 +1,5 @@
 # Cleaner for Stable Diffusion WebUI
-This is a WEBUI extension that provides image erasure functionality. It supports both UI and API simultaneously.
+This is a WEBUI extension that provides image erasure functionality. It supports both UI and API simultaneously. Powered by [lama](https://github.com/advimman/lama)
 
 
 ![example1](https://raw.githubusercontent.com/wiki/novitalabs/sd-webui-cleaner/images/example1.png)
@@ -14,6 +14,8 @@ git clone https://github.com/novitalabs/sd-webui-cleaner.git
 <br>
 
 ## Get Started
+
+https://github.com/novitalabs/sd-webui-cleaner/assets/55743667/3f9f652b-d3b7-4c08-a4c6-0e9fe731c77c
 
 ### API
 
@@ -35,3 +37,7 @@ body:
   "image": "<image base64 string>"
 }
 ```
+
+## Thanks
+- https://github.com/advimman/lama
+- https://github.com/Sanster/lama-cleaner
