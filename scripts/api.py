@@ -5,10 +5,12 @@ from modules.api import api
 import gradio as gr
 
 from scripts import lama
+from modules.shared import opts,OptionInfo
+
 
 
 def cleanup_api(_: gr.Blocks, app: FastAPI):
-    
+
     @app.post("/cleanup")
     def clean_up(
         input_image: str = Body("", title='cleanup input image'),

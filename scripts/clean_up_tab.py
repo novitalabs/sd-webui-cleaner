@@ -1,7 +1,7 @@
 import modules.scripts as scripts
 import gradio as gr
 
-from modules.shared import opts
+from modules.shared import opts,OptionInfo
 
 from modules import script_callbacks
 from modules.ui_components import ToolButton, ResizeHandleRow
@@ -11,8 +11,14 @@ from modules.ui_common import save_files
 from scripts import lama
 
 
+def on_ui_settings():
+    section = ('cleaner', "Cleaner")
+    opts.add_option("cleaner_use_gpu", OptionInfo(True, "Is Use GPU", gr.Checkbox, {"interactive": True}, section=section))
+
 def on_ui_tabs():
     
+
+        
     with gr.Blocks() as object_cleaner_tab:
 
         for tab_name in ["Clean up", "Clean up upload"]:
@@ -78,3 +84,5 @@ def on_ui_tabs():
 
 
 script_callbacks.on_ui_tabs(on_ui_tabs)
+script_callbacks.on_ui_settings(on_ui_settings)
+

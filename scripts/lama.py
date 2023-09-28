@@ -3,6 +3,7 @@ from litelama.model import download_file
 import os
 import gradio as gr
 from fastapi import FastAPI, Body
+from modules.shared import opts
 
 
 EXTENSION_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -23,9 +24,15 @@ def clean_object(image,mask):
     init_image = init_image.convert("RGB")
     mask_image = mask_image.convert("RGB")
 
+    device_used = opts.data.get("cleaner_use_gpu",True)
+
+    device = "cuda:0"
+    if not device_used:
+        device = "cpu"
+
     result = None
     try:
-        Lama.to("cuda:0")
+        Lama.to(device)
         result = Lama.predict(init_image, mask_image)
     except:
         pass
@@ -59,4 +66,4 @@ class LiteLama2(LiteLama):
                 
             self._checkpoint_path = checkpoint_path
         
-        self.load()
+        self.load(location="cpu")
