@@ -11,3 +11,25 @@ Clone this project in the WEBUI extensions folder
 ```
 git clone https://github.com/novitalabs/sd-webui-cleaner.git
 ```
+<br>
+## Get Started
+### API
+
+```
+//request-----------------------------------
+POST http://127.0.0.1:7860/cleanup
+
+body:
+{
+    "input_image": "<image base64 string>",
+    "mask": "<mask base64 string>"
+}
+
+
+//response-----------------------------------
+{
+  "code": 0,  // 0:success
+  "message": "ok",
+  "image": "<image base64 string>"
+}
+```
