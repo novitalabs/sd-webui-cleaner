@@ -43,7 +43,7 @@ body:
 <br>
 
 ### Used without GPU
-If you don't have a GPU, please set the cleanr_use_cpu parameter to true through the setting page or api.
+If you don't have a GPU, please set the cleaner_use_cpu parameter to true through the setting page or api.
 
 <br>
 
