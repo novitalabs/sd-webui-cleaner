@@ -20,8 +20,7 @@ def cleanup_api(_: gr.Blocks, app: FastAPI):
         _image = api.decode_base64_to_image(input_image)
         _mask = api.decode_base64_to_image(mask)
         
-        image_info = {"image": _image, "mask": _mask}
-        _output = lama.clean_object(image_info)
+        _output = lama.clean_object(_image,_mask)
         
         if len(_output) > 0:
             return {"code": 0, "message":"ok", "image":  api.encode_pil_to_base64(_output[0]).decode("utf-8")}
