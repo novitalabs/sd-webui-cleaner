@@ -30,7 +30,7 @@ def on_ui_tabs():
                 clean_up_init_mask = None
 
                 if tab_name == "Clean up":
-                    init_img_with_mask = gr.Image(label="Image for clean up with mask", show_label=False, elem_id="img2maskimg", source="upload",
+                    init_img_with_mask = gr.Image(label="Image for clean up with mask", show_label=False, elem_id="cleanup_img2maskimg", source="upload",
                                                   interactive=True, type="pil", tool="sketch", image_mode="RGBA", height=650, brush_color=opts.img2img_inpaint_mask_brush_color)
                 else:
                     with gr.Column(elem_id=f"cleanup_image_mask"):
