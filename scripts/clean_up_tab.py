@@ -9,11 +9,19 @@ import modules.generation_parameters_copypaste as parameters_copypaste
 from modules.ui_common import save_files
 
 from scripts import lama
-
+from PIL import Image
 
 def on_ui_settings():
     section = ('cleaner', "Cleaner")
     opts.add_option("cleaner_use_gpu", OptionInfo(True, "Is Use GPU", gr.Checkbox, {"interactive": True}, section=section))
+
+
+def send_to_cleaner(result):
+    image = Image.open(result[0]["name"])
+
+    print(image)
+
+    return image
 
 def on_ui_tabs():
     
@@ -60,7 +68,9 @@ def on_ui_tabs():
                                     paste_button=paste_button, tabname=paste_tabname, source_tabname=None, source_image_component=result_gallery,
                                     paste_field_names=[]
                                 ))
-                        
+
+                        send_to_cleaner_button = gr.Button("Send back To clean up", height=100)
+
 
                         if tab_name == "Clean up":
                             clean_button.click(
@@ -70,6 +80,14 @@ def on_ui_tabs():
                                     result_gallery
                                 ],
                             )
+
+                            send_to_cleaner_button.click(
+                                fn=send_to_cleaner,
+                                inputs=[result_gallery],
+                                outputs=[
+                                    init_img_with_mask
+                                ]
+                            )
                         else:
 
                             clean_button.click(
@@ -78,6 +96,14 @@ def on_ui_tabs():
                                 outputs=[
                                     result_gallery
                                 ],
+                            )
+
+                            send_to_cleaner_button.click(
+                                fn=send_to_cleaner,
+                                inputs=[result_gallery],
+                                outputs=[
+                                    clean_up_init_img
+                                ]
                             )
 
     return (object_cleaner_tab, "Cleaner", "cleaner_tab"),
