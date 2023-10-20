@@ -6,7 +6,7 @@
 <table>
   <tr>
     <td align="center" vertical-align="center">
-        <a href="https://novita.ai/?utm_source=github_organization">
+        <a href="https://novita.ai/?utm_source=github_organization&utm_medium=banner&utm_campaign=sd-webui-cleaner">
             <img src="https://raw.githubusercontent.com/wiki/novitalabs/sd-webui-cleaner/images/logo2.png" width="120px;" alt="Unsplash" />
         </a>
     </td>
@@ -14,7 +14,7 @@
       <b>AI image generation API</b>
       <br />
         <span text-align: center>Now we have provided the API for remove object.</span>   
-        <a href="https://docs.novita.ai/operation/operation-post-v3-cleanup?utm_source=github_organization">Cleanup API</a>
+        <a href="https://docs.novita.ai/operation/operation-post-v3-cleanup?utm_source=github_organization&utm_medium=banner&utm_campaign=sd-webui-cleaner">Cleanup API</a>
     </td>
   </tr>
 </table>
