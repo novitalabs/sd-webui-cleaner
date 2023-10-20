@@ -43,9 +43,9 @@ def on_ui_tabs():
                 else:
                     with gr.Column(elem_id=f"cleanup_image_mask"):
                         clean_up_init_img = gr.Image(label="Image for cleanup", show_label=False, source="upload",
-                                                     interactive=True, type="pil", elem_id="img_inpaint_base", height=325)
+                                                     interactive=True, type="pil", elem_id="cleanup_img_inpaint_base", height=325)
                         clean_up_init_mask = gr.Image(
-                            label="Mask", source="upload", interactive=True, type="pil", image_mode="RGBA", elem_id="img_inpaint_mask", height=325)
+                            label="Mask", source="upload", interactive=True, type="pil", image_mode="RGBA", elem_id="cleanup_img_inpaint_mask", height=325)
 
                 with gr.Row():
 
